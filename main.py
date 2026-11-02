@@ -1,4 +1,8 @@
 import leitor
+import operacoes
+
+matrizopera1 = []
+matrizopera2 = []
 
 def imprimirMatrizes(matriz):
     print()
@@ -8,30 +12,27 @@ def imprimirMatrizes(matriz):
 
 def seletorMatrizes():
     x = input("Nome da matriz para a operação: ")
-    if x.capitalize == 'A':
+    if x.capitalize() == 'A':
         return leitor.matrizA
-    if x.capitalize == 'B':
+    if x.capitalize() == 'B':
         return leitor.matrizB
-    if x.capitalize == 'C':
+    if x.capitalize() == 'C':
         return leitor.matrizC
-    if x.capitalize == 'D':
+    if x.capitalize() == 'D':
         return leitor.matrizD
-    if x.capitalize == 'E':
+    if x.capitalize() == 'E':
         return leitor.matrizE
-    if x.capitalize == 'F':
+    if x.capitalize() == 'F':
         return leitor.matrizF
-    if x.capitalize == 'G':
+    if x.capitalize() == 'G':
         return leitor.matrizG
-    if x.capitalize == 'H':
+    if x.capitalize() == 'H':
         return leitor.matrizH
-
-def somarMatrizes(matriz1, matriz2):
-    print("")
 
 while True:
     print("=== MENU ===")
     print("1- Listar matrizes")
-    print("2- Somar duas matrizes")
+    print("2- Somar duas matrizes da mesma ordem")
     print("3- Calcular a transposta de uma matriz")
     print("4- Multiplicar duas matrizes")
     print("5- Calcular o determinante de uma matriz")
@@ -57,10 +58,21 @@ while True:
         imprimirMatrizes(leitor.matrizH)
 
     elif opcao == 2:
-        matrizopera1 = seletorMatrizes
-        matrizopera2 = seletorMatrizes
-        
+        matrizopera1 = seletorMatrizes()
+        matrizopera2 = seletorMatrizes()
+        imprimirMatrizes(operacoes.somaMatrizes(matrizopera1, matrizopera2))
+
+    elif opcao == 3:
+        matrizopera1 = seletorMatrizes()
+        imprimirMatrizes(operacoes.transportaMatriz(matrizopera1))
+
+    elif opcao == 4:
+        matrizopera1 = seletorMatrizes()
+        matrizopera2 = seletorMatrizes()
+        imprimirMatrizes(operacoes.multiplicaMatrizes(matrizopera1, matrizopera2))
+
 
     elif opcao == 0:
+        print("Programa finalizado")
         break
 
