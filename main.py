@@ -14,20 +14,22 @@ def seletorMatrizes():
     x = input("Nome da matriz para a operação: ")
     if x.capitalize() == 'A':
         return leitor.matrizA
-    if x.capitalize() == 'B':
+    elif x.capitalize() == 'B':
         return leitor.matrizB
-    if x.capitalize() == 'C':
+    elif x.capitalize() == 'C':
         return leitor.matrizC
-    if x.capitalize() == 'D':
+    elif x.capitalize() == 'D':
         return leitor.matrizD
-    if x.capitalize() == 'E':
+    elif x.capitalize() == 'E':
         return leitor.matrizE
-    if x.capitalize() == 'F':
+    elif x.capitalize() == 'F':
         return leitor.matrizF
-    if x.capitalize() == 'G':
+    elif x.capitalize() == 'G':
         return leitor.matrizG
-    if x.capitalize() == 'H':
+    elif x.capitalize() == 'H':
         return leitor.matrizH
+    else:
+        print("Nome de matriz inválido")
 
 while True:
     print("=== MENU ===")
@@ -71,8 +73,15 @@ while True:
         matrizopera2 = seletorMatrizes()
         imprimirMatrizes(operacoes.multiplicaMatrizes(matrizopera1, matrizopera2))
 
+    elif opcao == 5:
+        matrizopera1 = seletorMatrizes()
+        print(f"Determinante: {operacoes.determinanteMatriz(matrizopera1)}")
+
 
     elif opcao == 0:
         print("Programa finalizado")
         break
+
+    else:
+        print("Opção inválida")
 
