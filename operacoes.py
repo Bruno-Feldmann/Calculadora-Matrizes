@@ -49,14 +49,18 @@ def determinanteMatriz(matriz1):
 
             for j in range(len(matriz1)):
 
-                colunaPositiva = (i + j) % len(matriz1)
-                colunaNegativa = (i - j) % len(matriz1)
+                colunaPositiva = (i + (j)) % len(matriz1)
+                colunaNegativa = (i - (j + 1)) % len(matriz1)
 
                 produtoPositivos *= matriz1[j][colunaPositiva]
                 produtoNegativos *= matriz1[j][colunaNegativa]
+                print(produtoPositivos)
+                print(produtoNegativos)
 
             somaPositivos += produtoPositivos
             somaNegativos += produtoNegativos
+            print(somaPositivos)
+            print(somaNegativos)
     
         return somaPositivos - somaNegativos
 
