@@ -1,3 +1,6 @@
+from pathlib import Path
+diretorio = Path(__file__).resolve().parent
+arqMatrizes = diretorio / "Matrizes/Matrizes.txt"
 
 def pularlinha(f):
     f.readline()
@@ -21,7 +24,7 @@ matrizF = [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
 matrizG = [[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]]
 matrizH = [[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]]
 
-f = open('Calculadora de Matrizes\\Matrizes\\Matrizes.txt', 'r')
+f = open(arqMatrizes, 'r')
 
 #Matrizes 2x2
 preencherMatriz(matrizA)
