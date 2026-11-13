@@ -4,12 +4,6 @@ import operacoes
 matrizopera1 = []
 matrizopera2 = []
 
-def imprimirMatrizes(matriz):
-    print()
-    for j in range(len(matriz)):
-        print(matriz[j])
-    print()
-
 def seletorMatrizes():
     x = input("Nome da matriz para a operação: ")
     if x.capitalize() == 'A':
@@ -43,40 +37,41 @@ while True:
     opcao = int(input("Opção: "))
     if opcao == 1:
         print("Matriz A:")
-        imprimirMatrizes(leitor.matrizA)
+        operacoes.imprimirMatrizes(leitor.matrizA)
         print("Matriz B:")
-        imprimirMatrizes(leitor.matrizB)
+        operacoes.imprimirMatrizes(leitor.matrizB)
         print("Matriz C:")
-        imprimirMatrizes(leitor.matrizC)
+        operacoes.imprimirMatrizes(leitor.matrizC)
         print("Matriz D:")
-        imprimirMatrizes(leitor.matrizD)
+        operacoes.imprimirMatrizes(leitor.matrizD)
         print("Matriz E:")
-        imprimirMatrizes(leitor.matrizE)
+        operacoes.imprimirMatrizes(leitor.matrizE)
         print("Matriz F:")
-        imprimirMatrizes(leitor.matrizF)
+        operacoes.imprimirMatrizes(leitor.matrizF)
         print("Matriz G:")
-        imprimirMatrizes(leitor.matrizG)
+        operacoes.imprimirMatrizes(leitor.matrizG)
         print("Matriz H:")
-        imprimirMatrizes(leitor.matrizH)
+        operacoes.imprimirMatrizes(leitor.matrizH)
 
     elif opcao == 2:
         matrizopera1 = seletorMatrizes()
         matrizopera2 = seletorMatrizes()
-        imprimirMatrizes(operacoes.somaMatrizes(matrizopera1, matrizopera2))
+        operacoes.imprimirMatrizes(operacoes.somaMatrizes(matrizopera1, matrizopera2))
 
     elif opcao == 3:
         matrizopera1 = seletorMatrizes()
-        imprimirMatrizes(operacoes.transportaMatriz(matrizopera1))
+        operacoes.imprimirMatrizes(operacoes.transportaMatriz(matrizopera1))
 
     elif opcao == 4:
         matrizopera1 = seletorMatrizes()
         matrizopera2 = seletorMatrizes()
-        imprimirMatrizes(operacoes.multiplicaMatrizes(matrizopera1, matrizopera2))
+        operacoes.imprimirMatrizes(operacoes.multiplicaMatrizes(matrizopera1, matrizopera2))
 
     elif opcao == 5:
         matrizopera1 = seletorMatrizes()
         print(f"Determinante: {operacoes.determinanteMatriz(matrizopera1)}")
 
+    
 
     elif opcao == 0:
         print("Programa finalizado")
