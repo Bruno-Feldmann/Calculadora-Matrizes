@@ -60,7 +60,7 @@ while True:
 
     elif opcao == 3:
         matrizopera1 = seletorMatrizes()
-        operacoes.imprimirMatrizes(operacoes.transportaMatriz(matrizopera1))
+        operacoes.imprimirMatrizes(operacoes.transpostaMatriz(matrizopera1))
 
     elif opcao == 4:
         matrizopera1 = seletorMatrizes()
@@ -71,7 +71,11 @@ while True:
         matrizopera1 = seletorMatrizes()
         print(f"Determinante: {operacoes.determinanteMatriz(matrizopera1)}")
 
-    
+    elif opcao == 6:
+        matrizopera1 = seletorMatrizes()
+        operacoes.escalonarMatriz(matrizopera1)
+        print("Matriz escalonada:")
+        operacoes.imprimirMatrizes(matrizopera1)
 
     elif opcao == 0:
         print("Programa finalizado")

@@ -14,7 +14,7 @@ def somaMatrizes(matriz1, matriz2):
     else:
         print("Erro: Matrizes de ordem diferente")
     
-def transportaMatriz(matriz1):
+def transpostaMatriz(matriz1):
     matrizresultado = [[0 for i in range(len(matriz1[0]))] for j in range(len(matriz1))]
 
     for i in range (len(matriz1)):
@@ -23,10 +23,10 @@ def transportaMatriz(matriz1):
     return matrizresultado
 
 def multiplicaMatrizes(matriz1, matriz2):
-    if len(matriz1) == len(matriz2[0]):
+    if len(matriz1[0]) == len(matriz2):
         matrizresultado = [[0 for i in range(len(matriz1[0]))] for j in range(len(matriz1))]
         for i in range(len(matriz1)):
-            for j in range(len(matriz1)):
+            for j in range(len(matriz2)):
                 produto = 0
                 for k in range(len(matriz1)):
                     produto += matriz1[j][k] * matriz2[k][i]
@@ -93,17 +93,10 @@ def determinanteMatriz(matriz1):
                     matrizCofator4[i - 1][contador4] = matriz1[i][j]
                     contador4 = (contador4 + 1) % 3    
 
-        print(determinanteMatriz(matrizCofator1))
-        print(determinanteMatriz(matrizCofator2))
-        print(determinanteMatriz(matrizCofator3))
-        print(determinanteMatriz(matrizCofator4))
-
         cofator1 = ((-1) ** 5) *  determinanteMatriz(matrizCofator1)
         cofator2 = ((-1) ** 4) *  determinanteMatriz(matrizCofator2)
         cofator3 = ((-1) ** 3) *  determinanteMatriz(matrizCofator3)
         cofator4 = ((-1) ** 2) *  determinanteMatriz(matrizCofator4)
-
-        print(cofator1, cofator2, cofator3, cofator4)
 
         determinante = matriz1[0][0] * cofator4
         determinante += matriz1[0][1] * cofator3
@@ -111,3 +104,19 @@ def determinanteMatriz(matriz1):
         determinante += matriz1[0][3] * cofator1
 
         return determinante
+
+def escalonarMatriz(matriz):
+    coluna = 0
+    for i in range(len(matriz)):
+        if matriz[i][i] == 0:
+            for j in range(i + 1, len(matriz)):
+                if matriz[j][i] != 0:
+                    matriz[i], matriz[j] = matriz[j], matriz[i]
+                    break
+            if matriz[i][i] == 0:
+                continue
+        for j in range(i + 1, len(matriz)):
+            fator = matriz[j][i] / matriz[i][i]
+            for k in range(i, len(matriz)):
+                matriz[j][k] -= fator * matriz[i][k]
+    return matriz
