@@ -1,6 +1,6 @@
 from pathlib import Path
 diretorio = Path(__file__).resolve().parent
-arqMatrizes = diretorio / "Matrizes/Matrizes.txt"
+arqMatrizes = diretorio / "matrizes.txt"
 
 def pularlinha(f):
     f.readline()

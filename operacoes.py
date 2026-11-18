@@ -13,6 +13,7 @@ def somaMatrizes(matriz1, matriz2):
         return matrizresultado
     else:
         print("Erro: Matrizes de ordem diferente")
+        return None
     
 def transpostaMatriz(matriz1):
     matrizresultado = [[0 for i in range(len(matriz1[0]))] for j in range(len(matriz1))]
@@ -34,6 +35,7 @@ def multiplicaMatrizes(matriz1, matriz2):
         return matrizresultado
     else:
         print("Erro: número de colunas da primeira matriz é diferente do número de linhas da segunda")
+        return None
 
 def determinanteMatriz(matriz1):
     if len(matriz1) == 2: # Para matrizes 2x2

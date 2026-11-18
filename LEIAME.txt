@@ -1,0 +1,51 @@
+CALCULADORA DE MATRIZES
+Trabalho Prático - Análise e Desenvolvimento de Sistemas
+- Bruno Gabriel Feldmann
+
+DESCRIÇÃO
+Programa de linha de comando que lê as matrizes A a H de um arquivo de texto
+e permite, por meio de um menu, executar as seguintes operações:
+  1 - Listar matrizes
+  2 - Somar duas matrizes da mesma ordem
+  3 - Calcular a transposta de uma matriz
+  4 - Multiplicar duas matrizes
+  5 - Calcular o determinante de uma matriz (2x2, 3x3 ou 4x4)
+  6 - Escalonar uma matriz
+  0 - Sair
+
+ARQUIVOS
+- main.py              : menu interativo e seleção das matrizes
+- operacoes.py         : funções de cada operação (soma, transposta, multiplicação, determinante, escalonamento e impressão)
+- leitor.py            : leitura das matrizes a partir do arquivo de texto
+- matrizes.txt         : arquivo com as matrizes de teste
+- Executar.bat         : Aplicativo para a execução do programa
+
+COMO COMPILAR
+Python é uma linguagem interpretada, portanto não é necessário compilar.
+Basta ter o Python instalado. Para conferir, execute no terminal:
+    python --version
+
+COMO EXECUTAR
+- Executar o aplicativo "Executar.bat"
+
+COMO USAR
+1. Digite o número da opção desejada no menu e pressione Enter.
+2. Quando solicitado, digite a letra da matriz (A, B, C, D, E, F, G ou H).
+   Maiúsculas e minúsculas são aceitas.
+3. O resultado é exibido na tela e o menu é mostrado novamente.
+4. Digite 0 para encerrar o programa.
+
+MATRIZES DISPONÍVEIS
+- 2x2: A, B, C
+- 3x3: D, E, F
+- 4x4: G, H
+
+Observações:
+- A soma exige duas matrizes da mesma ordem (ex.: A+B, D+E).
+- A multiplicação exige que o número de colunas da primeira seja igual ao
+  número de linhas da segunda (ex.: A.B, D.E).
+
+ALTERANDO AS MATRIZES
+Os valores podem ser alterados no arquivo matrizes.txt, mantendo o
+mesmo formato (cabeçalhos, linhas em branco, quantidade e ordem das matrizes).
+Os elementos de cada linha devem ser separados por espaços.

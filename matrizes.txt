@@ -1,0 +1,41 @@
+Matrizes de Ordem 2x2
+Matriz A:
+3   5
+1   -2
+
+Matriz B:
+-1  7
+4   0
+
+Matriz C:
+2   2
+-3  -3
+
+Matrizes de Ordem 3x3
+Matriz D:
+1   2   3
+0   4   5
+0   0   6
+
+Matriz E:
+-2  1   0
+3   5   1
+-1  2   4
+
+Matriz F:
+8   1   6
+3   5   7
+4   9   2
+
+Matrizes de Ordem 4x4
+Matriz G:
+1   0   2   -1
+3   0   0   5
+2   1   4   -3
+1   0   5   0
+
+Matriz H:
+4   3   2   1
+-1  2   0   3
+0   5   1   -2
+2   1   3   4
